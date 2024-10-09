@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Varela&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@100;300;400;700&family=Open+Sans:wght@100;300;400;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-ubuntu), sans-serif;
+  overflow-x: hidden;
+
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+
+
+
+.card {
+  position: relative;
+  overflow: hidden;
+  transition: clip-path 0.5s ease-in-out; 
+  clip-path: polygon(50% 100%, 100% 62%, 100% 0%, 0% 0%, 0% 62%); 
+ 
+}
+
+.card1 {
+  position: relative; 
+  overflow: hidden; 
+  background: transparent; 
+}
+
+.card1::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #f1f1f1; 
+  clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%); 
+  transition: clip-path 0.5s ease; 
+  z-index: 0; 
+}
+
+.card1:hover::before {
+  clip-path: polygon(50% 100%, 100% 62%, 100% 0%, 0% 0%, 0% 62%); 
+}
+
+.card-content {
+  position: relative; 
+  z-index: 1; 
+}
+
+.fixed1 {
+  clip-path: polygon(50% 100%, 100% 62%, 100% 0%, 0% 0%, 0% 62%); 
+  background: #f1f1f1;
+  transition: none;
+}
+
+
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 1s infinite;
+}
