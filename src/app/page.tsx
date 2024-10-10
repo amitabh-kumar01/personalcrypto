@@ -1,5 +1,5 @@
-import {Price, NetworkInfo, ContactForm, TestimonialSection, Navbar} from "@/components";
-import { TopCarousel ,AppLanding,Feature,Transaction, BitcoinNews, NewsLetter, Downloads, ChooseUs, SsCarousel } from "@/components";
+import { Navbar} from "@/components";
+import { TopCarousel ,AppLanding,Feature,Transaction,  } from "@/components";
 
 import { SlideProvider } from "@/components/context/SlideContext"; // Adjust the path accordingly
 export default function Home() {
