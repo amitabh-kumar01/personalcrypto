@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react"
 import { motion } from "framer-motion"
 import { verticalScreen, horizontalScreen } from "@/assets"
 import { CarouselData } from "../constants"
-import ScatteredCrypto from "./ScatteredCrypto"
+// import ScatteredCrypto from "./ScatteredCrypto"
 import { EffectBlock } from "./EffectBlock"
 
 export default function CarouselCompOne() {
